@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import TodoCards from "./components/TodoCards";
 
 interface TTodo {
   title: string;
@@ -48,10 +49,7 @@ function App() {
       <div>
         <div>
           {allTodo.map((item, index) => (
-            <div key={index}>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
+            <TodoCards item={item} key={index} />
           ))}
         </div>
       </div>
